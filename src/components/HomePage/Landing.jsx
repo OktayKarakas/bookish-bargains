@@ -4,7 +4,7 @@ import Point from "@/Icons/Point";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col lg:flex-row mx-3 p-3 pt-10">
+    <div className="flex flex-col lg:flex-row mx-3 lg:p-3 pt-10">
       {/* Text side */}
       <div className="self-center">
         {/* text col side */}
@@ -32,7 +32,7 @@ const Landing = () => {
           </button>
         </div>
         {/* page details */}
-        <div className="flex mt-8 space-x-14 mx-4 md:space-x-28">
+        <div className="flex mt-8 space-x-14 mx-6 md:space-x-28">
           <div className="flex flex-col">
             <div className="flex items-center">
               <Point className="-ml-6" />
