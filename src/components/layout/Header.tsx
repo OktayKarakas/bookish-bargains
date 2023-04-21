@@ -47,7 +47,7 @@ const Header = () => {
       </div>
       {/* For Mobile Devices */}
       <div
-        className={`lg:hidden absolute right-8 top-10 text-special_colors-gray rounded-md ${
+        className={`z-50 lg:hidden absolute right-4 top-10 text-special_colors-gray rounded-md ${
           isNavOpen
             ? "bg-special_colors-yellow w-2/4 h-auto"
             : "h-0 bg-transparent"
