@@ -63,7 +63,7 @@ const Landing = () => {
         </div>
       </div>
       {/* Image Side */}
-      <div className="relative md:self-center lg:self-auto max-h-screen mt-5">
+      <div className="relative md:self-center lg:self-auto mt-5">
         <Image
           src="/images/Book.jpg"
           alt="page-book"
