@@ -2,6 +2,8 @@ import Header from "@/components/layout/Header";
 import Landing from "./../components/HomePage/Landing";
 import AuthorBookIncludesSection from "./../components/HomePage/AuthorBookIncludesSection";
 import About from "@/components/HomePage/About";
+import OurClients from "@/components/HomePage/OurClients";
+import Callout from "./../components/HomePage/Callout";
 
 export default function Home() {
   return (
@@ -23,6 +25,15 @@ export default function Home() {
             author_img={"/images/HomePage/Author.svg"}
             qr_img={"/images/HomePage/author_qr.svg"}
           />
+        </div>
+      </div>
+      <div className="bg-white pt-8 pb-20 flex items-center justify-center mb-14 max-w-full max-h-full">
+        <OurClients />
+      </div>
+      <div className="relative py-10 flex items-center justify-center max-w-full max-h-full">
+        <div className="z-0 left-0 absolute w-full h-full bg-special_colors-blue"></div>
+        <div className="max-w-7xl">
+          <Callout />
         </div>
       </div>
     </main>

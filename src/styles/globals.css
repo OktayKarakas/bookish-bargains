@@ -12,3 +12,7 @@
 .cardo {
   font-family: "Cardo", serif;
 }
+
+.slick-list {
+  overflow: hidden;
+}
