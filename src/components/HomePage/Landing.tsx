@@ -4,7 +4,7 @@ import Point from "@/Icons/Point";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col lg:flex-row mx-3 lg:p-3 pt-10">
+    <div className="flex flex-col lg:flex-row mx-3 lg:p-3 max-h-full">
       {/* Text side */}
       <div className="self-center">
         {/* text col side */}
@@ -63,13 +63,13 @@ const Landing = () => {
         </div>
       </div>
       {/* Image Side */}
-      <div className="relative md:self-center lg:self-auto mt-5">
+      <div className="relative md:self-center lg:self-auto max-h-full">
         <Image
-          src="/images/Book.jpg"
+          src="/images/HomePage/Book.jpg"
           alt="page-book"
           width={592}
           height={800}
-          className="object-cover"
+          className="object-contain max-h-full py-5"
         />
       </div>
     </div>
