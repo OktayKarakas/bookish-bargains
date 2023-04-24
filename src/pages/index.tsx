@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <main className="overflow-auto mx-h-full">
       <div className="bg-special_colors-blue lg:h-screen max-h-full">
-        <div className="relative max-w-7xl mx-auto h-full max-h-full py-10 lg:py-0">
+        <div className="max-w-7xl mx-auto h-full max-h-full min-h-full py-10 lg:py-0">
           <Header />
-          <div className="lg:flex lg:items-center lg:justify-center lg:h-4/5 overflow-hidden">
+          <div className="lg:flex lg:items-center lg:justify-center lg:h-[90%] lg:max-h-[90%] px-3 overflow-hidden">
             <Landing />
           </div>
         </div>

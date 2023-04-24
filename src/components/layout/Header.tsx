@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       {/* For Computer */}
-      <div className="hidden lg:flex justify-between mx-3 p-3 pt-7 text-special_colors-gray">
+      <div className="hidden lg:flex justify-between max-h-[10%] h-[10%] mx-3 p-3 pt-7 text-special_colors-gray">
         {/* Right Nav */}
         <div className="flex items-center">
           <Book className="w-8 text-special_colors-yellow" />
@@ -47,7 +47,7 @@ const Header = () => {
       </div>
       {/* For Mobile Devices */}
       <div
-        className={`z-50 lg:hidden absolute right-4 top-10 text-special_colors-gray rounded-md ${
+        className={`z-50 lg:hidden fixed right-4 top-10 text-special_colors-yellow rounded-md ${
           isNavOpen
             ? "bg-special_colors-yellow w-2/4 h-auto"
             : "h-0 bg-transparent"
@@ -57,7 +57,7 @@ const Header = () => {
         {!isNavOpen ? (
           <Bars3Icon className="h-8 ml-auto mr-2" />
         ) : (
-          <XMarkIcon className="h-8 ml-auto mr-2" />
+          <XMarkIcon className="h-8 ml-auto mr-2 text-black" />
         )}
         {/* This div should have animation when shown it should have an animation like it is opening with duration */}
         <div

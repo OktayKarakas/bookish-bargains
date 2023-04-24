@@ -4,7 +4,7 @@ import Point from "@/Icons/Point";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col lg:flex-row mx-3 lg:p-3 max-h-full">
+    <div className="flex flex-col lg:flex-row  lg:p-3 max-h-full">
       {/* Text side */}
       <div className="self-center">
         {/* text col side */}

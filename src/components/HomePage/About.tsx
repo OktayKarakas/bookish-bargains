@@ -41,7 +41,7 @@ const About = ({ author_img, qr_img }: Props) => {
               <p className="text-gray-400">Best Seller Awards</p>
             </div>
           </div>
-          <div className="flex flex-col-reverse lg:flex-row space-x-10 bg-special_colors-blue py-3 px-4 w- w-fit mt-10">
+          <div className="flex flex-col-reverse xl:flex-row space-x-10 bg-special_colors-blue py-3 px-4 w- w-fit mt-10">
             <Image
               src={qr_img}
               width={130}
