@@ -4,7 +4,7 @@ import React from "react";
 const Callout = () => {
   return (
     <div className="relative">
-      <div className="z-50 relative flex items-center">
+      <div className="z-50 relative flex flex-col lg:flex-row items-center px-5">
         <div>
           <h3 className="text-white cardo text-5xl font-semibold after:content[''] after:block after:h-[4px] after:my-5 after:bg-special_colors-yellow after:w-14">
             Get Book Copy Today!
@@ -15,7 +15,7 @@ const Callout = () => {
             dictionary of over 200 Latin words.
           </p>
 
-          <button className="border border-yellow-300 px-10 py-3 mt-5 bg-special_colors-blue text-white mx-auto">
+          <button className="border border-yellow-300 px-10 py-3 mt-5 bg-special_colors-blue text-white mx-auto cardo text-lg font-semibold">
             Order Today
           </button>
         </div>

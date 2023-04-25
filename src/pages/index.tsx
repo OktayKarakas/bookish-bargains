@@ -4,6 +4,7 @@ import AuthorBookIncludesSection from "./../components/HomePage/AuthorBookInclud
 import About from "@/components/HomePage/About";
 import OurClients from "@/components/HomePage/OurClients";
 import Callout from "./../components/HomePage/Callout";
+import WhatWillYouLearn from "@/components/HomePage/WhatWillYouLearn";
 
 export default function Home() {
   return (
@@ -35,6 +36,9 @@ export default function Home() {
         <div className="max-w-7xl">
           <Callout />
         </div>
+      </div>
+      <div className="bg-white pt-8 pb-20 flex items-center justify-center mb-14 max-w-full max-h-full">
+        <WhatWillYouLearn />
       </div>
     </main>
   );
