@@ -9,19 +9,18 @@ const OurClients = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 2500,
-    autoplaySpeed: 1,
+    autoplaySpeed: 0,
     arrows: false,
     draggable: false,
+    dots: false,
     pauseOnHover: false,
-    cssEase: "linear",
+    cssEase: "ease",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          infinite: true,
-          dots: true,
         },
       },
       {
