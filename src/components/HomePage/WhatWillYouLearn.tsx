@@ -9,7 +9,7 @@ const WhatWillYouLearn = () => {
         What will you learn ?{" "}
       </h1>
       <div className="flex flex-col lg:flex-row lg:space-x-24 space-y-10 lg:space-y-0">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-7 gap-y-7 px-10 lg:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-7 gap-y-7 px-10 lg:px-0">
           <WhatWillYouLearnBlock
             number={"01"}
             description={

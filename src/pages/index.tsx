@@ -6,6 +6,7 @@ import OurClients from "@/components/HomePage/OurClients";
 import Callout from "./../components/HomePage/Callout";
 import WhatWillYouLearn from "@/components/HomePage/WhatWillYouLearn";
 import ChapterIncludes from "@/components/HomePage/ChapterIncludes";
+import WhatReadersSay from "./../components/HomePage/WhatReadersSay";
 
 export default function Home() {
   return (
@@ -44,6 +45,9 @@ export default function Home() {
       {/* Burada Kaldın.ChapterIncludes Yapılacak. */}
       <div className="pt-8 pb-20 flex items-center justify-center bg-[#F4F8FF]  max-w-full max-h-full">
         <ChapterIncludes />
+      </div>
+      <div className="bg-white pt-8 pb-20 flex items-center justify-center mb-16 max-w-full max-h-full">
+        <WhatReadersSay />
       </div>
     </main>
   );
