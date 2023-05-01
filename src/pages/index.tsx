@@ -7,6 +7,8 @@ import Callout from "./../components/HomePage/Callout";
 import WhatWillYouLearn from "@/components/HomePage/WhatWillYouLearn";
 import ChapterIncludes from "@/components/HomePage/ChapterIncludes";
 import WhatReadersSay from "./../components/HomePage/WhatReadersSay";
+import Subscription from "@/components/HomePage/Subscription";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -49,6 +51,10 @@ export default function Home() {
       <div className="bg-white pt-8 pb-20 flex items-center justify-center mb-16 max-w-full max-h-full">
         <WhatReadersSay />
       </div>
+      <div className="bg-white pt-8 pb-20 flex items-center justify-center mb-16 max-w-full max-h-full">
+        <Subscription />
+      </div>
+      <Footer />
     </main>
   );
 }

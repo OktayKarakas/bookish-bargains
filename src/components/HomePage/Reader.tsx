@@ -26,7 +26,7 @@ const Reader = ({ rating, name, img, description, title }: Props) => {
     return starIcon;
   }
   return (
-    <div className="bg-special_colors-blue xl:pr-0 my-5 xl:my-0 pl-7 pt-8 pb-5 max-w-[340px] overflow-hidden">
+    <div className="bg-special_colors-blue xl:pr-0 my-5 xl:my-0 px-6 pt-8 pb-5 max-w-[360px] overflow-hidden">
       <div className="flex space-x-5 items-center">
         <Image
           src={img}
