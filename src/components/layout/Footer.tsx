@@ -3,7 +3,7 @@ import Facebook from "@/Icons/Facebook";
 import Instagram from "@/Icons/Instagram";
 import LinkedIn from "@/Icons/LinkedIn";
 import Twitter from "@/Icons/Twitter";
-import ThreeDots from "@/Icons/threedots";
+import ThreeDots from "@/Icons/ThreeDots";
 
 const Footer = () => {
   return (
