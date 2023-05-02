@@ -14,7 +14,7 @@ const OurClients = () => {
     draggable: false,
     dots: false,
     pauseOnHover: false,
-    cssEase: "ease",
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,

@@ -9,7 +9,7 @@ interface Props {
 const About = ({ author_img, qr_img }: Props) => {
   return (
     <div>
-      <div className="flex flex-col lg:flex-row pt-24 pb-12 px-5 lg:px-0 lg:space-x-24 items-center">
+      <div className="flex flex-col lg:flex-row pt-24 pb-12 lg:px-0 px-2 lg:space-x-24 items-center">
         <Image src={author_img} width={590} height={690} alt="author-image" />
         <div>
           <h1 className="after:content-[''] after:block after:h-[2px] after:w-12 after:mt-5 after:bg-special_colors-yellow cardo font-semibold text-5xl tracking-tight leading-tight text-special_colors-blue">
