@@ -32,11 +32,11 @@ const Landing = () => {
           </button>
         </div>
         {/* page details */}
-        <div className="flex flex-wrap mt-8 space-x-14 mx-6 md:space-x-28">
+        <div className="flex mt-8 space-x-12 mx-6 md:space-x-28">
           <div className="flex flex-col">
             <div className="flex items-center">
-              <Point className="-ml-6" />
-              <h3 className="text-special_colors-gray font-bold cardo text-xl">
+              <Point className="-ml-6 w-3 lg:w-8" />
+              <h3 className="text-special_colors-gray font-bold cardo text-lg">
                 Pages:
               </h3>
             </div>
@@ -44,8 +44,8 @@ const Landing = () => {
           </div>
           <div className="flex flex-col">
             <div className="flex items-center">
-              <Point className="-ml-6" />
-              <h3 className="text-special_colors-gray font-bold cardo text-xl">
+              <Point className="-ml-6 w-3 lg:w-8" />
+              <h3 className="text-special_colors-gray font-bold cardo text-lg">
                 Length:
               </h3>
             </div>
@@ -53,8 +53,8 @@ const Landing = () => {
           </div>
           <div className="flex flex-col">
             <div className="flex items-center">
-              <Point className="-ml-6" />
-              <h3 className="text-special_colors-gray font-bold cardo text-xl">
+              <Point className="-ml-6 w-3 lg:w-8" />
+              <h3 className="text-special_colors-gray font-bold cardo text-lg">
                 Ratings:
               </h3>
             </div>
