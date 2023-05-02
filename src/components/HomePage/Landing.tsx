@@ -32,7 +32,7 @@ const Landing = () => {
           </button>
         </div>
         {/* page details */}
-        <div className="flex mt-8 space-x-14 mx-6 md:space-x-28">
+        <div className="flex flex-wrap mt-8 space-x-14 mx-6 md:space-x-28">
           <div className="flex flex-col">
             <div className="flex items-center">
               <Point className="-ml-6" />
