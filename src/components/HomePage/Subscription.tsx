@@ -2,7 +2,7 @@ import React from "react";
 
 const Subscription = () => {
   return (
-    <div className="bg-special_colors-yellow h-full pb-32 pt-24 w-full max-w-[1300px]">
+    <div className="bg-special_colors-yellow h-full pb-32 pt-24 w-full max-w-7xl">
       <h1 className="after:content-[''] after:block after:h-[3px] after:w-12 after:mt-2 after:bg-special_colors-blue after:mx-auto mb-5 text-center cardo font-bold text-[45px] line-tight text-special_colors-blue">
         Read a free chapter
       </h1>

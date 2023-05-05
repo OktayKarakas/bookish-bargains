@@ -1,4 +1,4 @@
-import React from "react";
+import React, { RefObject, useEffect } from "react";
 import {
   ChevronDownIcon,
   Bars3Icon,
@@ -7,6 +7,8 @@ import {
 import ShoppingCartIcon from "@/Icons/ShoppingCart";
 import Book from "@/Icons/Book";
 import { useState } from "react";
+import Link from "next/link";
+import { scroller } from "react-scroll";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -23,13 +25,33 @@ const Header = () => {
         <div className="flex items-center">
           {/* links */}
           <div className="flex space-x-10 font-normal antialiased text-[17px]">
-            <h3>Home</h3>
+            <h3>
+              <Link href="/">Home</Link>
+            </h3>
             <h3 className="flex">
               Pages <ChevronDownIcon className="w-4 ml-1" />
             </h3>
-            <h3>About</h3>
-            <h3>Services</h3>
-            <h3>Contact</h3>
+            <h3>
+              <Link href="/#About">
+                <span
+                  onClick={() => {
+                    scroller.scrollTo("About", {
+                      duration: 500,
+                      delay: 0,
+                      smooth: "easeInOutQuart",
+                    });
+                  }}
+                >
+                  About
+                </span>
+              </Link>
+            </h3>
+            <h3>
+              <Link href="/store">Store</Link>
+            </h3>
+            <h3>
+              <Link href="/contact">Contact</Link>
+            </h3>
           </div>
           <div className="relative mx-5">
             <ShoppingCartIcon className="mt-2" />
@@ -66,8 +88,24 @@ const Header = () => {
           } transition transform duration-500`}
         >
           <div className="font-normal antialiased text-[17px] text-center space-y-5 text-special_colors-blue mb-5">
-            <h3>Home</h3>
-            <h3>About</h3>
+            <h3>
+              <Link href="/">Home</Link>
+            </h3>
+            <h3>
+              <Link href="/">
+                <span
+                  onClick={() => {
+                    scroller.scrollTo("About", {
+                      duration: 500,
+                      delay: 0,
+                      smooth: 0.4, // Example number value for smooth scrolling
+                    });
+                  }}
+                >
+                  About
+                </span>
+              </Link>
+            </h3>
             <h3>Services</h3>
             <h3>Contact</h3>
           </div>

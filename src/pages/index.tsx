@@ -9,8 +9,10 @@ import ChapterIncludes from "@/components/HomePage/ChapterIncludes";
 import WhatReadersSay from "./../components/HomePage/WhatReadersSay";
 import Subscription from "@/components/HomePage/Subscription";
 import Footer from "@/components/layout/Footer";
+import { useRef } from "react";
 
 export default function Home() {
+  const about = useRef<HTMLDivElement>(null);
   return (
     <main className="overflow-auto max-h-full">
       <div className="bg-special_colors-blue lg:h-screen max-h-full">
@@ -25,7 +27,11 @@ export default function Home() {
         <AuthorBookIncludesSection />
       </div>
       <div className="bg-[#F4F8FF]">
-        <div className="bg-[#F4F8FF] py-10 flex items-center justify-center max-w-7xl mx-auto">
+        <div
+          className="bg-[#F4F8FF] py-10 flex items-center justify-center max-w-7xl mx-auto"
+          ref={about}
+          id="About"
+        >
           <About
             author_img={"/images/HomePage/Author.svg"}
             qr_img={"/images/HomePage/author_qr.svg"}
