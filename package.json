@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.2",
     "@heroicons/react": "^2.0.17",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
@@ -20,6 +22,8 @@
     "postcss": "8.4.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "3.3.1",
@@ -27,6 +31,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.7",
     "@types/react-slick": "^0.23.10",
     "@types/uuid": "^9.0.1"
   }
