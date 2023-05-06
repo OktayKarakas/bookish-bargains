@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  aboutRef: "",
+  isRedirectedToAboutFromStore: false,
 };
 
 export const headerSlice = createSlice({
   name: "header",
   initialState,
   reducers: {
-    aboutRef: (state, { payload }) => {
-      state.aboutRef = payload;
+    redirectToAboutFromStore: (state, { payload }) => {
+      state.isRedirectedToAboutFromStore = payload;
     },
   },
 });
 
-export const { aboutRef } = headerSlice.actions;
+export const { redirectToAboutFromStore } = headerSlice.actions;
 
 export default headerSlice.reducer;

@@ -1,4 +1,4 @@
-import React, { RefObject, useEffect } from "react";
+import React from "react";
 import {
   ChevronDownIcon,
   Bars3Icon,
@@ -9,9 +9,26 @@ import Book from "@/Icons/Book";
 import { useState } from "react";
 import Link from "next/link";
 import { scroller } from "react-scroll";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { redirectToAboutFromStore } from "../../Slices/header";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const router = useRouter();
+  const dispatch = useDispatch();
+  function handleAboutClick() {
+    if (router.pathname === "/store") {
+      dispatch(redirectToAboutFromStore(true));
+    } else {
+      dispatch(redirectToAboutFromStore(false));
+      scroller.scrollTo("About", {
+        duration: 500,
+        delay: 0,
+        smooth: 0.4, // Example number value for smooth scrolling
+      });
+    }
+  }
   return (
     <>
       {/* For Computer */}
@@ -32,18 +49,8 @@ const Header = () => {
               Pages <ChevronDownIcon className="w-4 ml-1" />
             </h3>
             <h3>
-              <Link href="/#About">
-                <span
-                  onClick={() => {
-                    scroller.scrollTo("About", {
-                      duration: 500,
-                      delay: 0,
-                      smooth: "easeInOutQuart",
-                    });
-                  }}
-                >
-                  About
-                </span>
+              <Link href="/">
+                <span onClick={handleAboutClick}>About</span>
               </Link>
             </h3>
             <h3>
@@ -81,7 +88,6 @@ const Header = () => {
         ) : (
           <XMarkIcon className="h-8 ml-auto mr-2 text-black" />
         )}
-        {/* This div should have animation when shown it should have an animation like it is opening with duration */}
         <div
           className={`${!isNavOpen && "invisible"} ${
             isNavOpen ? "h-auto opacity-100" : "h-0 opacity-0"
@@ -93,20 +99,12 @@ const Header = () => {
             </h3>
             <h3>
               <Link href="/">
-                <span
-                  onClick={() => {
-                    scroller.scrollTo("About", {
-                      duration: 500,
-                      delay: 0,
-                      smooth: 0.4, // Example number value for smooth scrolling
-                    });
-                  }}
-                >
-                  About
-                </span>
+                <span onClick={handleAboutClick}>About</span>
               </Link>
             </h3>
-            <h3>Services</h3>
+            <h3>
+              <Link href="/store">Store</Link>
+            </h3>
             <h3>Contact</h3>
           </div>
           <div className="flex items-center justify-center mt-2 text-[17px] p-2 rounded-md bg-special_colors-blue w-1/2 mx-auto">
