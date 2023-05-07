@@ -10,21 +10,21 @@ const OurClients = () => {
       <div className="flex">
         <div className="logo-slide flex">
           <Client
-            img={"/images/HomePage/clients/Logo-1.png"}
+            img={"/images/HomePage/clients/Logo-1.jpg"}
             title={"Amazen Corp"}
             description={
               "A long established fact that a who looking at its layout"
             }
           />
           <Client
-            img={"/images/HomePage/clients/Logo-2.png"}
+            img={"/images/HomePage/clients/Logo-2.jpg"}
             title={"Megan Books"}
             description={
               "A long established fact that a who looking at its layout"
             }
           />
           <Client
-            img={"/images/HomePage/clients/Logo-3.png"}
+            img={"/images/HomePage/clients/Logo-3.jpg"}
             title={"Los Books"}
             description={
               "A long established fact that a who looking at its layout."
@@ -73,21 +73,21 @@ const OurClients = () => {
             }
           />
           <Client
-            img={"/images/HomePage/clients/Logo-2.png"}
+            img={"/images/HomePage/clients/Logo-2.jpg"}
             title={"Megan Books"}
             description={
               "A long established fact that a who looking at its layout"
             }
           />
           <Client
-            img={"/images/HomePage/clients/Logo-3.png"}
+            img={"/images/HomePage/clients/Logo-3.jpg"}
             title={"Los Books"}
             description={
               "A long established fact that a who looking at its layout."
             }
           />
           <Client
-            img={"/images/HomePage/clients/Logo.png"}
+            img={"/images/HomePage/clients/Logo.jpg"}
             title={"Urban Lib"}
             description={
               "A long established fact that a who looking at its layout"
