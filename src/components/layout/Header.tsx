@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ChevronDownIcon,
   Bars3Icon,
@@ -10,11 +10,14 @@ import { useState } from "react";
 import Link from "next/link";
 import { scroller } from "react-scroll";
 import { useRouter } from "next/router";
-import { useDispatch } from "react-redux";
-import { redirectToAboutFromStore } from "../../Slices/header";
+import { useDispatch, useSelector } from "react-redux";
+import { redirectToAboutFromStore, OpenCart } from "../../Slices/header";
+import Cart from "../Store/Cart";
 
 const Header = () => {
+  const { isCartOpen } = useSelector((state: any) => state.header);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { cartItemNum } = useSelector((state: any) => state.header);
   const router = useRouter();
   const dispatch = useDispatch();
   function handleAboutClick() {
@@ -29,8 +32,18 @@ const Header = () => {
       });
     }
   }
+
+  useEffect(() => {
+    // Add this effect to disable scrolling when Cart is open
+    if (isCartOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isCartOpen]);
   return (
     <>
+      {isCartOpen && <Cart />}
       {/* For Computer */}
       <div className="hidden lg:flex justify-between max-h-[10%] h-[10%] mx-3 p-3 pt-7 text-special_colors-gray">
         {/* Right Nav */}
@@ -60,13 +73,13 @@ const Header = () => {
               <Link href="/contact">Contact</Link>
             </h3>
           </div>
-          <div className="relative mx-5">
+          <div className="relative mx-5" onClick={() => dispatch(OpenCart())}>
             <ShoppingCartIcon className="mt-2" />
             <p
               className="absolute top-[0px] px-[3px] py-[2px] bg-special_colors-yellow rounded-full text-special_colors-blue font-extrabold"
               style={{ fontSize: "10px", right: "-14px" }}
             >
-              01
+              {cartItemNum < 10 ? "0" + cartItemNum : cartItemNum}
             </p>
           </div>
           <button className="px-7 py-2 bg-special_colors-yellow text-special_colors-blue font-bold tracking-wide text-normal ml-7">
@@ -108,13 +121,13 @@ const Header = () => {
             <h3>Contact</h3>
           </div>
           <div className="flex items-center justify-center mt-2 text-[17px] p-2 rounded-md bg-special_colors-blue w-1/2 mx-auto">
-            <div className="relative mr-4">
+            <div className="relative mr-4" onClick={() => dispatch(OpenCart())}>
               <ShoppingCartIcon className="mt-2" />
               <p
                 className="absolute top-[0px] px-[3px] py-[2px] bg-special_colors-yellow rounded-full text-special_colors-blue font-extrabold"
                 style={{ fontSize: "10px", right: "-14px" }}
               >
-                01
+                {cartItemNum < 10 ? "0" + cartItemNum : cartItemNum}
               </p>
             </div>
             <h3>Cart</h3>

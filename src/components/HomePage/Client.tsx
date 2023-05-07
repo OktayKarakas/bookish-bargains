@@ -11,9 +11,9 @@ const Client = ({ img, title, description }: Props) => {
     <div className="flex flex-col justify-center items-center space-y-5 w-72 h-full max-w-xs">
       <Image
         src={img}
-        width={"200"}
-        height={"200"}
-        className="max-w-[150px] max-h-[120px] w-full h-[120px]"
+        width={"250"}
+        height={"250"}
+        className="max-w-[120px] max-h-[80px] w-full h-[120px]"
         alt="client-image"
       />
       <div className="text-center">

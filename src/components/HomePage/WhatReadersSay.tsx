@@ -40,14 +40,14 @@ const WhatReadersSay = () => {
           name="Martin Philips"
           title="Awesome Impact"
           description="All the Lorem Ipsum generators on the Internet tend to repeat willings predefined chunks value."
-          img="/images/HomePage/Readers/Reader-1.svg"
+          img="/images/HomePage/Readers/Reader-1.png"
         />
         <Reader
           rating={4.8}
           name="Christina Louis"
           title="Great Books Collections"
           description="All the Lorem Ipsum generators on the Internet tend to repeat willings predefined chunks value."
-          img="/images/HomePage/Readers/Reader-1.svg"
+          img="/images/HomePage/Readers/Reader-1.png"
         />
       </div>
       <Reader
@@ -55,7 +55,7 @@ const WhatReadersSay = () => {
         name="James Anderson"
         title="Mind Blowing Words"
         description="All the Lorem Ipsum generators on the Internet tend to repeat willings predefined chunks value."
-        img="/images/HomePage/Readers/Reader-1.svg"
+        img="/images/HomePage/Readers/Reader-1.png"
       />
     </div>
   );

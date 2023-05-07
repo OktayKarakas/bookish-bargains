@@ -36,7 +36,7 @@ const WhatWillYouLearn = () => {
           />
         </div>
         <Image
-          src="/images/HomePage/WhatWillYouLearn.svg"
+          src="/images/HomePage/WhatWillYouLearn.png"
           width="590"
           height="690"
           alt="What Will You Learn Image"
