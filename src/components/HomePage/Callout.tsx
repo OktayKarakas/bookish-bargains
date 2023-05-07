@@ -20,7 +20,7 @@ const Callout = () => {
           </button>
         </div>
         <Image
-          src={"/images/HomePage/BannerPhoto.svg"}
+          src={"/images/HomePage/BannerPhoto.png"}
           width={640}
           height={427}
           alt={"Book and coffee photo"}

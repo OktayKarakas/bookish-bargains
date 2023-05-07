@@ -49,12 +49,12 @@ export default function Home() {
             id="About"
           >
             <About
-              author_img={"/images/HomePage/Author.svg"}
-              qr_img={"/images/HomePage/author_qr.svg"}
+              author_img={"/images/HomePage/Author.png"}
+              qr_img={"/images/HomePage/author_qr.png"}
             />
           </div>
         </div>
-        <div className="bg-white pt-8 pb-20 flex items-center justify-center mb-14 max-w-full max-h-full">
+        <div className="bg-white pt-8 pb-12 flex items-center justify-center mb-14 max-w-full max-h-full">
           <OurClients />
         </div>
         <div className="relative py-10 flex items-center justify-center max-w-full max-h-full">

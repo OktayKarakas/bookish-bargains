@@ -10,14 +10,14 @@ const AuthorBookIncludesSection = () => {
       </h1>
       <div className="flex xl:flex-row flex-col space-y-10 xl:space-y-0 xl:space-x-10 justify-center">
         <AuthorBooksIncludesBooks
-          img={"/images/HomePage/BookIncludesSection-1.svg"}
+          img={"/images/HomePage/BookIncludesSection-1.png"}
           title={"Atomic One’s"}
           description={
             "Many variations of passages of Lorem Ipsum willing araise  alteration in some form."
           }
         />
         <AuthorBooksIncludesBooks
-          img={"/images/HomePage/BookIncludesSection-2.svg"}
+          img={"/images/HomePage/BookIncludesSection-2.png"}
           title={"The Dark Light"}
           description={
             "Many variations of passages of Lorem Ipsum willing araise  alteration in some form."
