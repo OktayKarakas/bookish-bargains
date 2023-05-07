@@ -13,7 +13,7 @@ const Client = ({ img, title, description }: Props) => {
         src={img}
         width={"250"}
         height={"250"}
-        className="max-w-[120px] max-h-[80px] w-full h-[120px]"
+        className="max-w-[110px] max-h-[80px] w-full h-[120px]"
         alt="client-image"
       />
       <div className="text-center">
