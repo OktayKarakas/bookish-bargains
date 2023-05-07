@@ -8,7 +8,7 @@ const Store = () => {
     <div className="overflow-auto max-h-full">
       <div className="bg-special_colors-blue max-h-full">
         <div className="max-w-7xl mx-auto h-full max-h-full min-h-full py-10 lg:py-0">
-          <Header/>
+          <Header />
           <Landing />
         </div>
       </div>

@@ -4,7 +4,7 @@ import React from "react";
 const Callout = () => {
   return (
     <div className="relative">
-      <div className="z-50 relative flex flex-col lg:flex-row items-center px-5">
+      <div className="z-[25] relative flex flex-col lg:flex-row items-center px-5">
         <div>
           <h3 className="text-white cardo text-5xl font-semibold after:content[''] after:block after:h-[4px] after:my-5 after:bg-special_colors-yellow after:w-14">
             Get Book Copy Today!
