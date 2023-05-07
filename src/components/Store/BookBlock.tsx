@@ -5,7 +5,7 @@ const BookBlock = () => {
   return (
     <div className="w-[300px] first-letter:md:w-[400px] mt-10 mx-auto">
       <Image
-        src="/images/Store/Book-1.svg"
+        src="/images/Store/Book.png"
         width="300"
         height="400"
         alt="book"
