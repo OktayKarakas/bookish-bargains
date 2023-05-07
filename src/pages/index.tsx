@@ -54,7 +54,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="bg-white pt-8 pb-12 flex items-center justify-center mb-14 max-w-full max-h-full">
+        <div className="bg-white pt-8 pb-12 mb-14 max-w-full max-h-full">
           <OurClients />
         </div>
         <div className="relative py-10 flex items-center justify-center max-w-full max-h-full">
