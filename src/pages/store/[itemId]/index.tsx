@@ -1,12 +1,10 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Item from "../../../components/Store/SingleProduct/Item";
 import Landing from "@/components/Store/Landing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const SingleItem = () => {
-  const router = useRouter();
   return (
     <div className="overflow-auto max-h-full">
       <div className="bg-special_colors-blue max-h-full">

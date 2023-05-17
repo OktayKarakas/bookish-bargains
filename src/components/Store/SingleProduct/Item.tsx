@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { AddCartItemNum } from "@/Slices/header";
 import { useRef } from "react";
+import { useRouter } from "next/router";
+import { findData } from "@/data";
+
+interface SingleItemTypes {
+  id: string;
+  image: string;
+  name: string;
+  price: number;
+  description: string;
+  detailedDescription: string;
+  publisher: string;
+  language: string;
+  paperback: number;
+  isbn: number;
+  dimension: string;
+}
 
 const Item = () => {
   const dispatch = useDispatch();
   const itemNum = useRef<HTMLInputElement>(null);
+  const router = useRouter();
+  const [singleItem, setSingleItem] = useState<
+    SingleItemTypes | null | undefined
+  >(null);
+
+  useEffect(() => {
+    if (router.query.itemId) {
+      const foundItem: SingleItemTypes = findData(router.query.itemId);
+      setSingleItem(foundItem || null);
+    }
+  }, [router]);
+
+  if (singleItem === undefined) {
+    router.push("/404");
+  }
+
   function handleClick() {
     if (
       Number(itemNum.current?.value) <= 0 &&
@@ -22,28 +54,28 @@ const Item = () => {
       dispatch(AddCartItemNum(Number(itemNum.current.value)));
     }
   }
+  if (singleItem === null) {
+    return <p>Loading...</p>;
+  }
   return (
     <div className="flex flex-col items-center px-5 lg:px-0 lg:flex-row lg:space-x-12">
       <Image src="/images/Store/Book.png" width="380" height="510" alt="book" />
       <div>
         <h3 className="cardo font-semibold text-2xl text-special_colors-blue">
-          The Atomic {"One's"}
+          {singleItem?.name}
         </h3>
         <p className="text-special_colors-yellow text-xl font-semibold">
-          $30<span>.00 USD</span>
+          ${singleItem?.price} USD
         </p>
         <p className="text-base text-[#969AA0] max-w-[500px] leading-[180%] my-4">
-          Making this the first true generator on the Internet. It uses a
-          dictionary of over 200 Latin words, combined with a handful of model
-          sentence structures, to generate Lorem Ipsum which looks reasonable.
-          The generated Lorem Ipsum.
+          {singleItem?.detailedDescription}
         </p>
         <div className="text-base text-[#969AA0] flex flex-col space-y-2 mt-2">
-          <h4>Publisher : Learning Private Limited (1 January 2021)</h4>
-          <h4>Language : English</h4>
-          <h4>Paperback : 212 pages</h4>
-          <h4>ISBN-10 : 9788120345799</h4>
-          <h4>Dimensions : 20 x 14 x 4 cm</h4>
+          <h4>Publisher : {singleItem?.publisher}</h4>
+          <h4>Language : {singleItem?.language}</h4>
+          <h4>Paperback : {singleItem?.paperback} page(s)</h4>
+          <h4>ISBN-10 : {singleItem?.isbn}</h4>
+          <h4>Dimensions : {singleItem?.dimension}</h4>
         </div>
         <div>
           <input
