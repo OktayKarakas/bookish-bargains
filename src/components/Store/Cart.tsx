@@ -30,7 +30,7 @@ const Cart = () => {
             <div className="flex justify-between flex-col lg:flex-row">
               <div className="flex flex-col space-y-1">
                 <p className="text-2xl text-special_colors-blue cardo font-semibold">
-                  Atomic One's
+                  Atomic {"One's"}
                 </p>
                 <p className="text-gray-400">$30.00 USD</p>
               </div>
