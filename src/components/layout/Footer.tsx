@@ -64,7 +64,7 @@ const Footer = () => {
             </ul>
           </div>
           {/* Keep in Touch */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left px-4">
             <h1 className="text-white cardo text-[24px] font-bold">
               Keep in Touch
             </h1>
