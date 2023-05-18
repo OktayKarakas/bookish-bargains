@@ -5,7 +5,7 @@ import Image from "next/image";
 const WhatWillYouLearn = () => {
   return (
     <div>
-      <h1 className="after:content-[''] after:block after:h-[2px] after:w-12 after:mt-5 after:bg-special_colors-yellow after:mx-auto mb-10 mt-24 text-center cardo font-bold text-4xl line-tight text-special_colors-blue">
+      <h1 className="after:content-[''] after:block after:h-[2px] after:w-12 after:mt-5 after:bg-special_colors-yellow after:mx-auto mb-10 mt-24 text-center cardo font-bold text-4xl line-tight text-special_colors-blue px-4">
         What will you learn ?{" "}
       </h1>
       <div className="flex flex-col lg:flex-row lg:space-x-24 space-y-10 lg:space-y-0">

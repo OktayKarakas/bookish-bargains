@@ -6,7 +6,7 @@ const WhatReadersSay = () => {
   return (
     <div className="flex items-center xl:space-x-5 pt-24 flex-col xl:flex-row mx-auto">
       <div className="max-w-[400px] mx-3 md:mx-0 md:mr-14">
-        <h1 className="after:content-[''] after:block after:h-[2px] after:w-12 after:mt-5 after:bg-special_colors-yellow cardo font-semibold text-[45px] tracking-tight leading-tight text-special_colors-blue xl:w-[80%]">
+        <h1 className="after:content-[''] after:block after:h-[2px] after:w-12 after:mt-5 after:bg-special_colors-yellow cardo font-semibold text-[45px] tracking-tight leading-tight text-special_colors-blue xl:w-[80%] px-4">
           What Readers Say About the Book
         </h1>
         <p className="text-gray-400 text-[19px] my-5">
