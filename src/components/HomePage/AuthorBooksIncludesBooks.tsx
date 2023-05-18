@@ -1,5 +1,6 @@
 import Point from "@/Icons/Point";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const AuthorBooksIncludesBooks = ({ img, title, description }: Props) => {
+  const router = useRouter();
   return (
     <div className="flex flex-col flex-nowrap lg:flex-row">
       <Image
@@ -44,7 +46,10 @@ const AuthorBooksIncludesBooks = ({ img, title, description }: Props) => {
             <p className="text-gray-400 whitespace-nowrap">10 Hours</p>
           </div>
         </div>
-        <button className="border-2 border-yellow-300 px-10 py-3 mt-5 bg-white text-special_colors-blue mx-auto">
+        <button
+          className="border-2 border-yellow-300 px-10 py-3 mt-5 bg-white text-special_colors-blue mx-auto hover:bg-yellow-300 hover:font-semibold transition duration-150"
+          onClick={() => router.push("/store")}
+        >
           Order Today
         </button>
       </div>

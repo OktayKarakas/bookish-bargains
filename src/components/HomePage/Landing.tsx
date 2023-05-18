@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Point from "@/Icons/Point";
+import { useRouter } from "next/router";
 
 const Landing = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-col lg:flex-row lg:p-3 max-h-full">
       {/* Text side */}
@@ -24,7 +26,10 @@ const Landing = () => {
         </div>
         {/* buttons */}
         <div className="flex space-x-3 lg:space-x-5 mt-5">
-          <button className="p-4 lg:px-12 lg:py-4 bg-special_colors-yellow text-special_colors-blue font-bold">
+          <button
+            className="p-4 lg:px-12 lg:py-4 bg-special_colors-yellow text-special_colors-blue font-bold hover:bg-yellow-500 duration-150"
+            onClick={() => router.push("/store")}
+          >
             Order Today
           </button>
           <button className="underline p-4 lg:px-12 lg:py-3 text-special_colors-gray underline-offset-8 font-bold">

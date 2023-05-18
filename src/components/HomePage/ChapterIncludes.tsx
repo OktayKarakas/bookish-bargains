@@ -44,7 +44,7 @@ const ChapterIncludes = () => {
           <ChapterIncludesBlock key={uuidv4()} item={item} />
         ))}
       </div>
-      <button className="mx-auto text-center block py-5 px-28 text-special_colors-blue bg-special_colors-yellow font-bold text-[19px] mt-14">
+      <button className="mx-auto text-center block py-5 px-28 text-special_colors-blue bg-special_colors-yellow font-bold text-[19px] mt-14 hover:bg-yellow-500 hover:duration-150">
         Start a 15-Days Free Trail
       </button>
       <p className="text-center text-[18px] lg:px-[38%] mt-5 text-gray-400">

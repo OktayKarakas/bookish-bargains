@@ -39,7 +39,7 @@ const BookBlock = ({ id, image, name, price, description }: Props) => {
             </h4>
           </div>
           <button
-            className="border-2 border-yellow-300 px-10 py-3 mt-5 bg-white text-special_colors-blue mx-auto"
+            className="border-2 border-yellow-300 px-10 py-3 mt-5 bg-white text-special_colors-blue mx-auto hover:bg-yellow-300 duration-150 transition"
             onClick={() => {
               router.push(`/store/${id}`);
             }}

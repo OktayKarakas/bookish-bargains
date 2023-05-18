@@ -49,11 +49,24 @@ const Item = () => {
       alert(
         "You can't add less then one item.One item is added to your cart as it is the default value."
       );
-      dispatch(AddItem(singleItem));
+      dispatch(
+        AddItem({
+          item: singleItem,
+          amountItem: { id: singleItem!.id, amount: 1 },
+        })
+      );
     } else if (itemNum.current && itemNum.current.value) {
       alert(itemNum.current.value + " item(s) added to your cart.");
       dispatch(AddCartItemNum(Number(itemNum.current.value)));
-      dispatch(AddItem(singleItem));
+      dispatch(
+        AddItem({
+          item: singleItem,
+          amountItem: {
+            id: singleItem!.id,
+            amount: Number(itemNum.current.value),
+          },
+        })
+      );
     }
   }
   if (singleItem === null) {
@@ -90,7 +103,7 @@ const Item = () => {
             ref={itemNum}
           />
           <button
-            className="px-7 h-[45px] bg-special_colors-yellow max-h-[45px] text-special_colors-blue font-bold tracking-wide text-normal"
+            className="px-7 h-[45px] bg-special_colors-yellow max-h-[45px] text-special_colors-blue font-bold tracking-wide text-normal hover:bg-yellow-500 duration-150"
             onClick={handleClick}
           >
             Add to Cart
