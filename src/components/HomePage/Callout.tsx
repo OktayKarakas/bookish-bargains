@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Callout = () => {
+  const router = useRouter();
   return (
     <div className="relative">
       <div className="z-[25] relative flex flex-col lg:flex-row items-center px-5">
@@ -15,7 +17,10 @@ const Callout = () => {
             dictionary of over 200 Latin words.
           </p>
 
-          <button className="border border-yellow-300 px-10 py-3 mt-5 bg-special_colors-blue text-white mx-auto cardo text-lg font-semibold">
+          <button
+            className="border border-yellow-300 px-10 py-3 mt-5 bg-special_colors-blue text-white mx-auto cardo text-lg font-semibold hover:bg-special_colors-yellow hover:text-special_colors-blue duration-150"
+            onClick={() => router.push("/store")}
+          >
             Order Today
           </button>
         </div>

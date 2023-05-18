@@ -11,7 +11,7 @@ import Link from "next/link";
 import { scroller } from "react-scroll";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import { redirectToAboutFromStore, OpenCart } from "../../Slices/header";
+import { OpenCart } from "../../Slices/header";
 import Cart from "../Store/Cart";
 
 const Header = () => {
@@ -20,17 +20,13 @@ const Header = () => {
   const { cartItemNum } = useSelector((state: any) => state.header);
   const router = useRouter();
   const dispatch = useDispatch();
-  function handleAboutClick() {
-    if (router.pathname === "/store") {
-      dispatch(redirectToAboutFromStore(true));
-    } else {
-      dispatch(redirectToAboutFromStore(false));
-      scroller.scrollTo("About", {
-        duration: 500,
-        delay: 0,
-        smooth: 0.4, // Example number value for smooth scrolling
-      });
-    }
+  async function handleAboutClick() {
+    await router.push("/");
+    scroller.scrollTo("About", {
+      duration: 500,
+      delay: 0,
+      smooth: 0.4, // Example number value for smooth scrolling
+    });
   }
 
   useEffect(() => {
@@ -58,22 +54,17 @@ const Header = () => {
             <h3>
               <Link href="/">Home</Link>
             </h3>
-            <h3 className="flex">
-              Pages <ChevronDownIcon className="w-4 ml-1" />
-            </h3>
-            <h3>
-              <Link href="/">
-                <span onClick={handleAboutClick}>About</span>
-              </Link>
+            <h3 className="cursor-pointer">
+              <span onClick={handleAboutClick}>About</span>
             </h3>
             <h3>
               <Link href="/store">Store</Link>
             </h3>
-            <h3>
-              <Link href="/contact">Contact</Link>
-            </h3>
           </div>
-          <div className="relative mx-5" onClick={() => dispatch(OpenCart())}>
+          <div
+            className="relative mx-5 cursor-pointer"
+            onClick={() => dispatch(OpenCart())}
+          >
             <ShoppingCartIcon className="mt-2" />
             <p
               className="absolute top-[0px] px-[3px] py-[2px] bg-special_colors-yellow rounded-full text-special_colors-blue font-extrabold"
@@ -82,7 +73,10 @@ const Header = () => {
               {cartItemNum < 10 ? "0" + cartItemNum : cartItemNum}
             </p>
           </div>
-          <button className="px-7 py-2 bg-special_colors-yellow text-special_colors-blue font-bold tracking-wide text-normal ml-7">
+          <button
+            className="px-7 py-2 bg-special_colors-yellow text-special_colors-blue font-bold tracking-wide text-normal ml-7"
+            onClick={() => router.push("/store")}
+          >
             Order Today
           </button>
         </div>
@@ -110,18 +104,18 @@ const Header = () => {
             <h3>
               <Link href="/">Home</Link>
             </h3>
-            <h3>
-              <Link href="/">
-                <span onClick={handleAboutClick}>About</span>
-              </Link>
+            <h3 className="cursor-pointer">
+              <span onClick={handleAboutClick}>About</span>
             </h3>
             <h3>
               <Link href="/store">Store</Link>
             </h3>
-            <h3>Contact</h3>
           </div>
-          <div className="flex items-center justify-center mt-2 text-[17px] p-2 rounded-md bg-special_colors-blue w-1/2 mx-auto">
-            <div className="relative mr-4" onClick={() => dispatch(OpenCart())}>
+          <div
+            className="flex items-center justify-center mt-2 text-[17px] p-2 rounded-md bg-special_colors-blue w-1/2 mx-auto"
+            onClick={() => dispatch(OpenCart())}
+          >
+            <div className="relative mr-4">
               <ShoppingCartIcon className="mt-2" />
               <p
                 className="absolute top-[0px] px-[3px] py-[2px] bg-special_colors-yellow rounded-full text-special_colors-blue font-extrabold"
@@ -132,7 +126,10 @@ const Header = () => {
             </div>
             <h3>Cart</h3>
           </div>
-          <button className="p-3 bg-special_colors-blue rounded-md mx-auto block my-4">
+          <button
+            className="p-3 bg-special_colors-blue rounded-md mx-auto block my-4"
+            onClick={() => router.push("/store")}
+          >
             Order Today
           </button>
         </div>

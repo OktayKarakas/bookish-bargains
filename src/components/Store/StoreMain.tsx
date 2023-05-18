@@ -1,10 +1,27 @@
 import BookBlock from "./BookBlock";
-import { bookData } from "../../data.js";
 
-const StoreMain = () => {
+interface Item {
+  id: string;
+  image: string;
+  name: string;
+  price: number;
+  description: string;
+  detailedDescription: string;
+  publisher: string;
+  language: string;
+  paperback: number;
+  isbn: number;
+  dimension: string;
+}
+
+interface Props {
+  data: Item[];
+}
+
+const StoreMain = ({ data }: Props) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 max-w-7xl mx-auto">
-      {bookData.map((item) => {
+      {data?.map((item) => {
         return (
           <BookBlock
             key={item.id}
