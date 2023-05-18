@@ -4,6 +4,7 @@ import Router from "next/router";
 import ProgressBar from "@badrap/bar-of-progress";
 import { Provider } from "react-redux";
 import store from "../store";
+import Head from "next/head";
 
 const progress = new ProgressBar({
   size: 2,
@@ -19,6 +20,10 @@ Router.events.on("routeChangeError", progress.finish);
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
+      <Head>
+        <title>Bookish Bargains</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+      </Head>
       <Component {...pageProps} />
     </Provider>
   );
